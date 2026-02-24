@@ -1,0 +1,96 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix xml: <http://www.w3.org/XML/1998/namespace>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix dbp: <http://dbpedia.org/resource/>.
+@prefix dbp-ont: <http://dbpedia.org/ontology/>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix wgs84: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+
+#personal information
+dbp:Napoleon dbp-ont:birthPlace dbp:Ajaccio;
+foaf:name "Napoleon Bonaparte"; 
+dbp-ont:birthDate "1769-08-15^^xsd:date";
+dbp-ont:deathPlace dbp:Saint_Helena;
+dbp-ont:deathDate "1821-05-05^^xsd:date";
+dbp-ont:thumbnail <https://upload.wikimedia.org/wikipedia/commons/5/50/Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg>;
+dbp-ont:spouse dbp:Joséphine_de_Beauharnais .
+dbp:Joséphine_de_Beauharnais foaf:name "Joséphine de Beauharnais".
+dbp:Napoleon dbp-ont:spouse dbp:Marie_Louise .
+dbp:Marie_Louise foaf:name "Marie Louise of Austria" .
+
+#geometry of personal info
+dbp:Ajaccio wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(8.738651044064255 41.918098666793895)"^^<http://www.opengis.net/ont/sf#wktLiteral>;
+rdfs:label "Ajaccio".
+dbp:Saint_Helena wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(-5.683044381525536 -15.950147225369253)"^^<http://www.opengis.net/ont/sf#wktLiteral>;
+rdfs:label "Saint Helena" .
+
+#first victory
+dbp:First_victory a dbp-ont:Event ;
+rdfs:label "Siege of Toulon" ;
+dbp-ont:place dbp:Toulon .
+
+dbp:Napoleon dbp-ont:victory dbp:First_victory .
+
+dbp:Toulon wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(5.933487448054729 43.123056396346115)"^^<http://www.opengis.net/ont/sf#wktLiteral> ;
+rdfs:label "Toulon" .
+
+#coronation
+dbp:Coronation a dbp-ont:Event ;
+rdfs:label "Coronation of Napoleon as emperor" ;
+dbp-ont:place dbp:Paris ;
+dbp-ont:date "1804-12-02^^xsd:date" .
+
+dbp:Napoleon dbp-ont:coronation dbp:Coronation .
+
+dbp:Paris wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(2.3495832994596815 48.85312625294815)"^^<http://www.opengis.net/ont/sf#wktLiteral> ;
+rdfs:label "Paris" .
+
+#first banishment
+dbp:First_Banishment a dbp-ont:Event ;
+rdfs:label "First banishment of Napoleon" ;
+dbp-ont:place dbp:Elba .
+
+dbp:Napoleon dbp-ont:exile dbp:First_Banishment .
+
+dbp:Elba wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(10.332132311391275 42.81674679587001)"^^<http://www.opengis.net/ont/sf#wktLiteral> ;
+rdfs:label "Elba" .
+
+#last battle
+dbp:Last_battle a dbp-ont:Event ;
+rdfs:label "Battle of Waterloo" ;
+dbp-ont:place dbp:Waterloo .
+
+dbp:Napoleon dbp-ont:defeat dbp:Last_battle .
+
+dbp:Waterloo wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(4.4049467016333494 50.67933035510919)"^^<http://www.opengis.net/ont/sf#wktLiteral> ;
+rdfs:label "Waterloo" .
+
+#second coalition
+dbp:Second_Coalition dbp-ont:commander dbp:Napoleon ;
+rdfs:label "War of the second coalition" ;
+dc:coverage dbp:Fort_Bard,
+dbp:Chiusella, 
+dbp:Turbigo,
+dbp:Marengo .
+
+#geo of second coalition
+dbp:Fort_Bard wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(7.744722 45.608333)"^^<http://www.opengis.net/ont/sf#wktLiteral> ; 
+rdfs:label "Siege of Fort Bard".
+dbp:Chiusella wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(7.866667 45.383333)"^^<http://www.opengis.net/ont/sf#wktLiteral> ;
+rdfs:label "Battle of Chiusella River". 
+dbp:Turbigo wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(8.733004 45.528148)"^^<http://www.opengis.net/ont/sf#wktLiteral> ; 
+rdfs:label "Combat of Turbigo".
+dbp:Marengo wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(8.6775 44.885556)"^^<http://www.opengis.net/ont/sf#wktLiteral> ; 
+rdfs:label "Battle of Marengo".
+
+
+
+
+
+
+
+
+

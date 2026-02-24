@@ -1,0 +1,100 @@
+# This is a spatial biography of Valentino Rossi
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dbp: <http://dbpedia.org/resource/> .
+@prefix dbp-ont: <http://dbpedia.org/ontology/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix wgs84: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+# Person resources
+
+dbp:Valentino_Rossi
+    rdfs:label "Valentino Rossi" ;
+    foaf:name "Valentino Rossi" ;
+    dbp-ont:birthPlace dbp:Urbino ;
+    dbp-ont:birthDate "1979-02-16"^^xsd:date ;
+    dbp-ont:thumbnail <https://upload.wikimedia.org/wikipedia/commons/4/46/Valentino_Rossi_2017.jpg> ;
+    dbp-ont:team dbp:Yamaha, dbp:Honda, dbp:Ducati ;
+    dbp-ont:livedIn dbp:Tavullia, dbp:Milan, dbp:London, dbp:Ibiza ;
+    dbp-ont:firstRace dbp:Welkom ;
+    dbp-ont:firstVictoryMotoGP dbp:Suzuka ;
+    dbp-ont:firstVictory500 dbp:Castle_Donington ;
+    dbp-ont:firstVictory250 dbp:Assen ;
+    dbp-ont:firstVictory125 dbp:Brno ;
+    dbp-ont:firstWorldChampionshipMotoGP dbp:Melbourne ;
+    dbp-ont:lastVictoryMotoGP dbp:Assen ;
+    dbp-ont:mostMotoGPwins dbp:Barcelona, dbp:Assen ;
+    dbp-ont:championshipLocations dbp:Melbourne, dbp:Rio_de_Janeiro, dbp:Sepang, dbp:Motegi .
+
+# Team Labels
+
+dbp:Yamaha rdfs:label "Yamaha" .
+dbp:Honda  rdfs:label "Honda" .
+dbp:Ducati rdfs:label "Ducati" .
+
+# Locations with geometries
+
+dbp:Urbino
+    rdfs:label "Urbino" ;
+    wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(12.6333 43.7167)"^^<http://www.opengis.net/ont/sf#wktLiteral> .
+
+dbp:Tavullia
+    rdfs:label "Tavullia" ;
+    wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(12.7333 43.8167)"^^<http://www.opengis.net/ont/sf#wktLiteral> .
+
+dbp:Welkom
+    rdfs:label "Welkom" ;
+    wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(27.9833 -27.9833)"^^<http://www.opengis.net/ont/sf#wktLiteral> .
+
+dbp:Brno
+    rdfs:label "Brno" ;
+    wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(16.6068 49.1951)"^^<http://www.opengis.net/ont/sf#wktLiteral> .
+
+dbp:Assen
+    rdfs:label "Assen" ;
+    wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(6.5667 52.9967)"^^<http://www.opengis.net/ont/sf#wktLiteral> .
+
+dbp:Castle_Donington
+    rdfs:label "Castle Donington" ;
+    wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(-1.3333 52.8333)"^^<http://www.opengis.net/ont/sf#wktLiteral> .
+
+dbp:Suzuka
+    rdfs:label "Suzuka" ;
+    wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(136.5833 34.8833)"^^<http://www.opengis.net/ont/sf#wktLiteral> .
+
+dbp:Melbourne
+    rdfs:label "Melbourne" ;
+    wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(144.9631 -37.8136)"^^<http://www.opengis.net/ont/sf#wktLiteral> .
+
+dbp:Milan
+    rdfs:label "Milan" ;
+    wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(9.19 45.46)"^^<http://www.opengis.net/ont/sf#wktLiteral> .
+
+dbp:London
+    rdfs:label "London" ;
+    wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(-0.1275 51.5072)"^^<http://www.opengis.net/ont/sf#wktLiteral> .
+
+dbp:Ibiza
+    rdfs:label "Ibiza" ;
+    wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(1.4333 38.9167)"^^<http://www.opengis.net/ont/sf#wktLiteral> .
+
+dbp:Barcelona
+    rdfs:label "Barcelona" ;
+    wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(2.1769 41.3825)"^^<http://www.opengis.net/ont/sf#wktLiteral> .
+
+dbp:Rio_de_Janeiro
+    rdfs:label "Rio de Janeiro" ;
+    wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(-43.1964 -22.9083)"^^<http://www.opengis.net/ont/sf#wktLiteral> .
+
+dbp:Sepang
+    rdfs:label "Sepang" ;
+    wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(101.7000 2.7167)"^^<http://www.opengis.net/ont/sf#wktLiteral> .
+
+dbp:Motegi
+    rdfs:label "Motegi" ;
+    wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(140.1833 36.5333)"^^<http://www.opengis.net/ont/sf#wktLiteral> .
