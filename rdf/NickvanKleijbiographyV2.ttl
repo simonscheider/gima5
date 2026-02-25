@@ -1,0 +1,81 @@
+# Biography of Nick van Kleij
+
+@prefix ex: <http://example.org/nick/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dbp: <http://dbpedia.org/resource/> .
+@prefix dbp-ont: <http://dbpedia.org/ontology/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix wgs84: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix sf: <http://www.opengis.net/ont/sf#> .
+
+# PERSON DATA
+
+ex:Nick_van_Kleij a foaf:Person ;
+    foaf:name "Nick van Kleij" ;
+    dbp-ont:birthPlace dbp:Spijkenisse ;
+    dbp-ont:birthDate "2002-12-31"^^xsd:date ;
+    dbp-ont:thumbnail <https://media.licdn.com/dms/image/v2/D4E03AQHXyI1lJ1fSeg/profile-displayphoto-scale_200_200/B4EZjHiWrOGwAY-/0/1755694329873?e=2147483647&v=beta&t=VOkc9eoBSoLq9snE1yPT9eYH9sSUoKwEJaxxDyh1wlQ> ;
+    foaf:interest "Basketball", "Cycling", "Running", "City trips" ;
+    foaf:knows ex:Ravi, ex:Mark, ex:Vincent, ex:Iris, ex:Donna, ex:Esmee, ex:Mees, ex:Luuk ;
+    # Koppeling naar vakanties en onderwijs:
+    dbp-ont:visitedCity dbp:Manchester, dbp:Gdansk, dbp:Budapest, dbp:Reykjavik, dbp:Venice, dbp:Rome, dbp:Mallorca ;
+    dbp-ont:education ex:Education_Primary, ex:Education_Secondary, ex:Education_HBO, ex:Education_University .
+
+# EDUCATION & DIPLOMAS
+
+ex:Education_Primary a dbp-ont:Education ;
+    rdfs:label "Primary School: Mr. van Eijckschool" ;
+    dbp-ont:city dbp:Rotterdam ;
+    dct:temporal "2007-2015" ;
+    wgs84:geometry "POINT(4.550510 51.877774)"^^sf:wktLiteral .
+
+ex:Education_Secondary a dbp-ont:Education ;
+    rdfs:label "Secondary School: CBS Plus" ;
+    dbp-ont:city dbp:Rotterdam ;
+    dbp-ont:degree "HAVO Diploma" ;
+    dct:temporal "2015-2021" ;
+    wgs84:geometry "POINT(4.471853 51.883700)"^^sf:wktLiteral .
+
+ex:Education_HBO a dbp-ont:Education ;
+    rdfs:label "HBO: Hogeschool Rotterdam" ;
+    dbp-ont:city dbp:Rotterdam ;
+    dbp-ont:degree "Bachelor of Science" ;
+    dct:temporal "2021-2025" ;
+    wgs84:geometry "POINT(4.462885 51.910235)"^^sf:wktLiteral .
+
+ex:Education_University a dbp-ont:Education ;
+    rdfs:label "University: Utrecht University" ;
+    dbp-ont:city dbp:Utrecht ;
+    dct:temporal "2025-Present" ;
+    wgs84:geometry "POINT(5.167504 52.088772)"^^sf:wktLiteral .
+
+# FRIENDS DEFINITIONS
+
+ex:Ravi a foaf:Person ; foaf:name "Ravi" ; dbp-ont:place ex:Education_HBO .
+ex:Mark a foaf:Person ; foaf:name "Mark" ; dbp-ont:place ex:Education_HBO .
+ex:Vincent a foaf:Person ; foaf:name "Vincent" ; dbp-ont:place ex:Education_HBO .
+ex:Iris a foaf:Person ; foaf:name "Iris" ; dbp-ont:place ex:Education_HBO .
+ex:Donna a foaf:Person ; foaf:name "Donna" ; dbp-ont:place ex:Education_HBO .
+ex:Esmee a foaf:Person ; foaf:name "Esmee" ; dbp-ont:place dbp:Ridderkerk .
+ex:Mees a foaf:Person ; foaf:name "Mees" ; dbp-ont:place ex:Education_HBO .
+ex:Luuk a foaf:Person ; foaf:name "Luuk" ; dbp-ont:place ex:Education_HBO .
+
+# SPATIAL DATA (GEOMETRY)
+
+dbp:Spijkenisse wgs84:geometry "POINT(4.325670 51.850460)"^^sf:wktLiteral ; rdfs:label "Spijkenisse" .
+dbp:Manchester wgs84:geometry "POINT(-2.242631 53.480759)"^^sf:wktLiteral ; rdfs:label "Manchester" .
+dbp:Gdansk wgs84:geometry "POINT(18.646638 54.352025)"^^sf:wktLiteral ; rdfs:label "Gdansk" .
+dbp:Budapest wgs84:geometry "POINT(19.040235 47.497912)"^^sf:wktLiteral ; rdfs:label "Budapest" .
+dbp:Reykjavik wgs84:geometry "POINT(-21.942401 64.126521)"^^sf:wktLiteral ; rdfs:label "Reykjavik" .
+dbp:Venice wgs84:geometry "POINT(12.315515 45.440847)"^^sf:wktLiteral ; rdfs:label "Venice" .
+dbp:Rome wgs84:geometry "POINT(12.496366 41.902783)"^^sf:wktLiteral ; rdfs:label "Rome" .
+dbp:Mallorca wgs84:geometry "POINT(2.934985 39.695263)"^^sf:wktLiteral ; rdfs:label "Mallorca" .
+
+dbp:Rotterdam wgs84:geometry "POINT(4.550510 51.877774)"^^sf:wktLiteral ; rdfs:label "Mr. van Eijckschool" .
+dbp:Rotterdam wgs84:geometry "POINT(4.471853 51.883700)"^^sf:wktLiteral ; rdfs:label "CBS Plus" .
+dbp:Rotterdam wgs84:geometry "POINT(4.462885 51.910235)"^^sf:wktLiteral ; rdfs:label "Hogeschool Rotterdam" .
+dbp:Utrecht wgs84:geometry "POINT(5.167504 52.088772)"^^sf:wktLiteral ; rdfs:label "Utrecht University".
+dbp:Ridderkerk wgs84:geometry "POINT(4.581416 51.887800)"^^sf:wktLiteral ; rdfs:label "Ridderkerk" .
