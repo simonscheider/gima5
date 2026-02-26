@@ -7,7 +7,6 @@
 @prefix dbp-ont: <http://dbpedia.org/ontology/>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix wgs84: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
-@prefix geo: <http://www.opengis.net/ont/geosparql#>.
 
 # Basic information about Carlos Alcaraz
 dbp:Carlos_Alcaraz rdf:type dbp-ont:Athlete ;
@@ -28,33 +27,33 @@ dbp:Juan_Carlos_Ferrero
     foaf:name "Juan Carlos Ferrero" .
 
 # Important locations for Carlos Alcaraz
-dbp:El_Palmar
-    rdfs:label "El Palmar, Murcia" ;
-    wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(-1.1700 37.9800)"^^geo:wktLiteral .
+dbp:El_Palmar 
+    wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(-1.1700 37.9800)"^^<http://www.opengis.net/ont/sf#wktLiteral> ;
+    rdfs:label "El Palmar, Murcia" .
 
-dbp:Rio_de_Janeiro
-    rdfs:label "Rio de Janeiro" ;
-    wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(-43.1729 -22.9068)"^^geo:wktLiteral .
+dbp:Rio_de_Janeiro 
+    wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(-43.1729 -22.9068)"^^<http://www.opengis.net/ont/sf#wktLiteral> ;
+    rdfs:label "Rio de Janeiro" .
 
-dbp:Melbourne
-    rdfs:label "Melbourne" ;
-    wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(144.9631 -37.8136)"^^geo:wktLiteral .
+dbp:Melbourne 
+    wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(144.9631 -37.8136)"^^<http://www.opengis.net/ont/sf#wktLiteral> ;
+    rdfs:label "Melbourne" .
 
-dbp:New_York_City
-    rdfs:label "New York City" ;
-    wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(-74.0060 40.7128)"^^geo:wktLiteral .
+dbp:New_York_City 
+    wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(-74.0060 40.7128)"^^<http://www.opengis.net/ont/sf#wktLiteral> ;
+    rdfs:label "New York City" .
 
-dbp:London
-    rdfs:label "London" ;
-    wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(-0.1276 51.5072)"^^geo:wktLiteral .
+dbp:London 
+    wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(-0.1276 51.5072)"^^<http://www.opengis.net/ont/sf#wktLiteral> ;
+    rdfs:label "London" .
 
-dbp:Paris
-    rdfs:label "Paris" ;
-    wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(2.3522 48.8566)"^^geo:wktLiteral .
+dbp:Paris 
+    wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(2.3522 48.8566)"^^<http://www.opengis.net/ont/sf#wktLiteral> ;
+    rdfs:label "Paris" .
 
-dbp:Villena
-    rdfs:label "Villena" ;
-    wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(-0.8650 38.6370)"^^geo:wktLiteral .
+dbp:Villena 
+    wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(-0.8650 38.6370)"^^<http://www.opengis.net/ont/sf#wktLiteral> ;
+    rdfs:label "Villena" .
 
 # More information for each milestone in his career
 dbp:Rio_Open_2020
