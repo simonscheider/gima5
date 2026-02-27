@@ -1,0 +1,49 @@
+#This is a spatial biography of Jenning de Boo
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix xml: <http://www.w3.org/XML/1998/namespace>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix dbp: <http://dbpedia.org/resource/>.
+@prefix dbp-ont: <http://dbpedia.org/ontology/>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix wgs84: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+
+# Jenning de Boo - Dutch speed skater
+dbp:Jenning_de_Boo dbp-ont:birthPlace dbp:Groningen ;
+    foaf:name "Jenning de Boo" ;
+    dbp-ont:birthDate "2000-01-22"^^xsd:date ;
+    dbp-ont:thumbnail <https://schaatsteamreggeborgh.nl/wp-content/uploads/2022/08/Jenning-bewerkt.jpg> ;
+    dbp-ont:nationality dbp:Netherlands ;
+    dbp-ont:sport dbp:Speed_skating .
+
+# Where was Jenning de Boo born?
+dbp:Groningen wgs84:geometry "POINT(6.566667 53.216667)"^^<http://www.opengis.net/ont/sf#wktLiteral> ;
+    rdfs:label "Groningen" .
+
+# Where did Jenning de Boo win his first international medal?
+dbp:Jenning_de_Boo dbp-ont:award dbp:Inzell .
+dbp:Inzell wgs84:geometry "POINT(12.750000 47.766667)"^^<http://www.opengis.net/ont/sf#wktLiteral> ;
+    rdfs:label "Inzell" .
+
+# Where did Jenning de Boo make his Olympic debut and win 2 silver medals?
+dbp:Jenning_de_Boo dbp-ont:olympicMedal dbp:Milan .
+dbp:Milan wgs84:geometry "POINT(9.183333 45.466667)"^^<http://www.opengis.net/ont/sf#wktLiteral> ;
+    rdfs:label "Milan" .
+
+# Where did Jenning de Boo ride his personal record for 1500m?
+dbp:Jenning_de_Boo dbp-ont:personalRecord1500m dbp:Heerenveen .
+dbp:Heerenveen wgs84:geometry "POINT(5.916667 52.966667)"^^<http://www.opengis.net/ont/sf#wktLiteral> ;
+    rdfs:label "Heerenveen" .
+
+# Where did Jenning de Boo ride his personal record for 1000m?
+dbp:Jenning_de_Boo dbp-ont:personalRecord1000m dbp:Calgary .
+dbp:Calgary wgs84:geometry "POINT(-114.066667 51.050000)"^^<http://www.opengis.net/ont/sf#wktLiteral> ;
+    rdfs:label "Calgary" .
+
+# Where did Jenning de Boo ride his personal record for 500m?
+dbp:Jenning_de_Boo dbp-ont:personalRecord500m dbp:Salt_Lake_City .
+dbp:Salt_Lake_City wgs84:geometry "POINT(-111.891111 40.760833)"^^<http://www.opengis.net/ont/sf#wktLiteral> ;
+    rdfs:label "Salt Lake City" .

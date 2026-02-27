@@ -18,8 +18,8 @@ dbp:Valentino_Rossi
     foaf:name "Valentino Rossi" ;
     dbp-ont:birthPlace dbp:Urbino ;
     dbp-ont:birthDate "1979-02-16"^^xsd:date ;
-    dbp-ont:thumbnail <https://upload.wikimedia.org/wikipedia/commons/4/46/Valentino_Rossi_2017.jpg> ;
-    dbp-ont:team dbp:Yamaha, dbp:Honda, dbp:Ducati ;
+    dbp-ont:thumbnail <https://nl.wikipedia.org/wiki/Valentino_Rossi#/media/Bestand:Valentino_Rossi_2017.jpg> ;
+    dbp-ont:team dbp:Aprilia, dbp:Ducati, dbp:Honda, dbp:Yamaha ;
     dbp-ont:livedIn dbp:Tavullia, dbp:Milan, dbp:London, dbp:Ibiza ;
     dbp-ont:firstRace dbp:Welkom ;
     dbp-ont:firstVictoryMotoGP dbp:Suzuka ;
@@ -33,9 +33,10 @@ dbp:Valentino_Rossi
 
 # Team Labels
 
-dbp:Yamaha rdfs:label "Yamaha" .
-dbp:Honda  rdfs:label "Honda" .
+dbp:Aprilia rdfs:label "Aprilia" .
 dbp:Ducati rdfs:label "Ducati" .
+dbp:Honda  rdfs:label "Honda" .
+dbp:Yamaha rdfs:label "Yamaha" .
 
 # Locations with geometries
 
