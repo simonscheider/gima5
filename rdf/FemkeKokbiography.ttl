@@ -1,0 +1,103 @@
+# Spatial biography of Femke Kok
+
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix dbp:     <http://dbpedia.org/resource/> .
+@prefix dbp-ont: <http://dbpedia.org/ontology/> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix wgs84:   <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix geo:     <http://www.opengis.net/ont/geosparql#> .
+
+
+
+# PERSON
+
+dbp:Femke_Kok
+    foaf:name        "Femke Kok" ;
+    rdfs:label       "Femke Kok" ;
+    dbp-ont:birthPlace dbp:Nij_Beets ;
+    dbp-ont:birthDate  "2000-10-05"^^xsd:date ;
+    dbp-ont:occupation dbp:Speed_skating ;
+    dbp-ont:thumbnail  <https://sportal365images.com/process/smp-images-production/sportnieuws.nl/25022026/80d3c40a-0710-43e9-9b12-c3f54fd4d2b7.jpg> ;
+    dc:description   "Dutch speed skater from Friesland who won multiple medals in international competitions." .
+
+
+# BIRTHPLACE
+
+dbp:Nij_Beets
+    wgs84:geometry  "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(6.0004216 53.0706866)"^^<http://www.opengis.net/ont/sf#wktLiteral> ;
+    rdfs:label "Nij Beets" .
+
+
+# 2026 WINTER OLYMPICS – GOLD MEDAL
+
+<http://dbpedia.org/resource/2026_Winter_Olympics>
+    rdfs:label           "2026 Winter Olympics" ;
+    dbp-ont:eventPlace   dbp:Milan ;
+    dbp-ont:goldMedalist dbp:Femke_Kok .
+
+dbp:Milan
+    wgs84:geometry  "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(9.1833333 45.4666671)"^^<http://www.opengis.net/ont/sf#wktLiteral> ;
+    rdfs:label "Milaan" .
+
+
+# WORLD RECORD – 500 m (Salt Lake City, 2025)
+
+dbp:WorldRecord_500m_Femke_Kok
+    rdfs:label          "World record 500m speed skating – Femke Kok, 2025" ;
+    dbp-ont:recordHolder dbp:Femke_Kok ;
+    dbp-ont:place        dbp:Salt_Lake_City ;
+    dct:date             "2025-02-12"^^xsd:date .
+
+dbp:Salt_Lake_City
+    wgs84:geometry  "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(-111.8910190 40.7607630)"^^<http://www.opengis.net/ont/sf#wktLiteral> ;
+    rdfs:label "Salt Lake City" .
+
+
+# WORLD CUP VICTORIES
+
+dbp:WorldCup_SpeedSkating_Femke_Kok
+    rdfs:label    "World Cup speed skating victories – Femke Kok" ;
+    dbp-ont:winner dbp:Femke_Kok ;
+    dc:coverage    dbp:Hamar,
+                   dbp:Calgary,
+                   dbp:Heerenveen,
+                   dbp:Salt_Lake_City .
+
+
+# PERSONAL BESTS
+
+dbp:PersonalBests_Femke_Kok
+    rdfs:label    "Personal bests – Femke Kok" ;
+    dc:subject    dbp:Femke_Kok ;
+    dc:coverage   dbp:Salt_Lake_City,
+                  dbp:Calgary,
+                  dbp:Heerenveen .
+
+
+# PLACES
+
+dbp:Calgary
+    wgs84:geometry  "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(-114.0719190 51.0447330)"^^<http://www.opengis.net/ont/sf#wktLiteral> ;
+    rdfs:label "Calgary" .
+
+dbp:Heerenveen
+    wgs84:geometry  "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(5.9404000 52.9591000)"^^<http://www.opengis.net/ont/sf#wktLiteral> ;
+    rdfs:label "Heerenveen" .
+
+dbp:Hamar
+    wgs84:geometry  "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(11.0679900 60.7942200)"^^<http://www.opengis.net/ont/sf#wktLiteral> ;
+    rdfs:label "Hamar" .
+
+
+# MAIN COMPETITOR NATIONS AT 2026 OLYMPICS
+
+dbp:Netherlands  rdfs:label "The Netherlands" .
+dbp:Japan        rdfs:label "Japan" .
+
+<http://dbpedia.org/resource/2026_Winter_Olympics>
+    dbp-ont:competitor dbp:Netherlands ;
+    dbp-ont:competitor dbp:Japan .
