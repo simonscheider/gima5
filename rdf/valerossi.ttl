@@ -18,7 +18,7 @@ dbp:Valentino_Rossi
     foaf:name "Valentino Rossi" ;
     dbp-ont:birthPlace dbp:Urbino ;
     dbp-ont:birthDate "1979-02-16"^^xsd:date ;
-    dbp-ont:thumbnail <https://nl.wikipedia.org/wiki/Valentino_Rossi#/media/Bestand:Valentino_Rossi_2017.jpg> ;
+    dbp-ont:thumbnail <https://upload.wikimedia.org/wikipedia/commons/1/17/Valentino_Rossi_2024_WEC_Fuji_6.jpg> ;
     dbp-ont:team dbp:Aprilia, dbp:Ducati, dbp:Honda, dbp:Yamaha ;
     dbp-ont:livedIn dbp:Tavullia, dbp:Milan, dbp:London, dbp:Ibiza ;
     dbp-ont:firstRace dbp:Welkom ;
