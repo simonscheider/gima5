@@ -9,6 +9,7 @@
 @prefix wgs84: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
+#last edit 27 februari 2026 10:48
 #personal information
 dbp:Napoleon dbp-ont:birthPlace dbp:Ajaccio;
 foaf:name "Napoleon Bonaparte"; 
