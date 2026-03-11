@@ -1,4 +1,4 @@
-#This is a spatial biography of Jenning de Boo, made by Roos Loman.
+#This is a spatial biography of Jenning de Boo
 
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
@@ -10,42 +10,55 @@
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix wgs84: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
-@prefix sf: <http://www.opengis.net/ont/sf#> .
-@prefix geo: <http://www.opengis.net/ont/geosparql#>.
 
-# Jenning de Boo - Dutch speed skater
-dbp:Jenning_de_Boo dbp-ont:birthPlace dbp:Groningen ;
-    foaf:name "Jenning de Boo" ;
-    dbp-ont:birthDate "2002-01-22"^^xsd:date ;
-    dbp-ont:thumbnail <https://schaatsteamreggeborgh.nl/wp-content/uploads/2022/08/Jenning-bewerkt.jpg> ;
-    dbp-ont:nationality dbp:Netherlands ;
-    dbp-ont:sport dbp:Speed_skating .
+dbp:Jenning_de_Boo rdf:type dbp-ont:Athlete;
+	foaf:name "Jenning de Boo" ;
+	dbp-ont:birthDate "2002-01-22"^^xsd:date ;
+	dbp-ont:birthPlace dbp:Groningen ;
+	dbp-ont:sport dbp:Speedskating .
 
-# Where was Jenning de Boo born?
-dbp:Groningen wgs84:geometry "POINT(6.566667 53.216667)"^^sf:wktLiteral ;
-    rdfs:label "Groningen" .
+#Locations of important sporting events
+dbp:Groningen
+	wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(6.566667 53.216667)"^^<http://www.opengis.net/ont/sf#wktLiteral> ;
+	rdfs:label "Groningen" .
 
-# Where did Jenning de Boo win his first international medal?
-dbp:Jenning_de_Boo dbp-ont:award dbp:Inzell .
-dbp:Inzell wgs84:geometry "POINT(12.750000 47.766667)"^^sf:wktLiteral ;
-    rdfs:label "Inzell" .
+dbp:Inzell 
+	wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(12.750000 47.766667)"^^<http://www.opengis.net/ont/sf#wktLiteral> ;
+	rdfs:label "Inzell" .
 
-# Where did Jenning de Boo make his Olympic debut and win 2 silver medals?
-dbp:Jenning_de_Boo dbp-ont:olympicMedal dbp:Milan .
-dbp:Milan wgs84:geometry "POINT(9.183333 45.466667)"^^sf:wktLiteral ;
-    rdfs:label "Milan" .
+dbp:Milan 
+	wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(9.183333 45.466667)"^^<http://www.opengis.net/ont/sf#wktLiteral> ;
+	rdfs:label "Milan" .
 
-# Where did Jenning de Boo ride his personal record for 1500m?
-dbp:Jenning_de_Boo dbp-ont:personalRecord1500m dbp:Heerenveen .
-dbp:Heerenveen wgs84:geometry "POINT(5.916667 52.966667)"^^sf:wktLiteral ;
-    rdfs:label "Heerenveen" .
+dbp:Heerenveen 
+	wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(5.916667 52.950000)"^^<http://www.opengis.net/ont/sf#wktLiteral> ;
+	rdfs:label "Heerenveen" .
 
-# Where did Jenning de Boo ride his personal record for 1000m?
-dbp:Jenning_de_Boo dbp-ont:personalRecord1000m dbp:Calgary .
-dbp:Calgary wgs84:geometry "POINT(-114.066667 51.050000)"^^sf:wktLiteral ;
-    rdfs:label "Calgary" .
+dbp:Calgary 
+	wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(-114.066667 51.050000)"^^<http://www.opengis.net/ont/sf#wktLiteral> ;
+	rdfs:label "Calgary" .
 
-# Where did Jenning de Boo ride his personal record for 500m?
-dbp:Jenning_de_Boo dbp-ont:personalRecord500m dbp:Salt_Lake_City .
-dbp:Salt_Lake_City wgs84:geometry "POINT(-111.891111 40.760833)"^^sf:wktLiteral ;
-    rdfs:label "Salt Lake City" .
+dbp:Salt_Lake_City 
+	wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(-111.891111 40.760833)"^^<http://www.opengis.net/ont/sf#wktLiteral> ;
+	rdfs:label "Salt Lake City" .
+
+#Important events
+dbp:pr500
+	dbp-ont:location dbp:Salt_Lake_City ;
+	dbp-ont:date "2025-11-16"^^xsd:date .
+
+dbp:pr1000
+	dbp-ont:location dbp:Calgary ; 
+	dbp-ont:date "2025-01-25"^^xsd:date .
+	
+dbp:pr1500
+	dbp-ont:location dbp:Heerenveen ;
+	dbp-ont:date "2025-10-04"^^xsd:date .
+	
+dbp:olympicDebut
+	dbp-ont:location dbp:Milan ;
+	dbp-ont:date "2026-02-01"^^xsd:date.
+
+dbp:firstMedal
+	dbp-ont:location dbp:Inzell ;
+	dbp-ont:date "2023-02-12"^^xsd:date .
